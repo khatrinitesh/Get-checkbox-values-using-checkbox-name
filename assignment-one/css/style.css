@@ -1,0 +1,46 @@
+*{
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing:border-box ;
+  box-sizing: border-box;
+}
+
+ul,ol{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.row::after{
+  clear: both;
+  display: table;
+  content: "";
+}
+
+/* #demo{
+  display: none;
+} */
+
+form input{display: none;}
+
+form .form_group{
+  display: inline-block;
+}
+
+form label::before{
+  content: "";
+  display: inline-block;
+  width:20px;
+  height: 20px;
+  background: red;
+  border-radius: 50%;
+  vertical-align: middle;
+  margin: 0 20px;
+  color: #fff;
+  text-align: center;
+  line-height: 20px;
+  cursor: pointer;
+}
+
+form input:checked + label::before{
+  content: "\2713";
+}
